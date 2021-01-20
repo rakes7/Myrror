@@ -10,6 +10,13 @@ import {environment} from '../../../../../environments/environment';
 })
 export class ProfileDataInterestComponent implements OnInit {
 
+  re = /Like:/gi;
+  re2 = /Artist:/gi;
+  re3 = /Song:/gi;
+  re4 = /Topic:/gi;
+  re5 = /Training:/gi;
+  re6 = /Canale:/gi;
+  re7 = /Genre:/gi;
   /**
    * The user profile (logged or not).
    */
@@ -59,6 +66,24 @@ export class ProfileDataInterestComponent implements OnInit {
   }, {
     id: 'app_category',
     name: 'App Categories',
+  }, {
+    id: 'news_preference',
+    name: 'News',
+  },{
+    id: 'music_preference',
+    name: 'Music',
+  },{
+    id: 'training_preference',
+    name: 'Training',
+  },{
+    id: 'tv_preference',
+    name: 'Tv Programs',
+  },{
+    id: 'video_preference',
+    name: 'Video',
+  },{
+    id: 'recipe_preference',
+    name: 'Recipes',
   },
 
     // TODO add here new source type
@@ -95,7 +120,7 @@ export class ProfileDataInterestComponent implements OnInit {
       this.data = stats.map((data) => {
         return {
           weight: data.weight,
-          text: data.value,
+          text: data.value, //
         };
       });
     });
@@ -109,7 +134,7 @@ export class ProfileDataInterestComponent implements OnInit {
       this.data = stats.map((data) => {
         return {
           weight: data.weight,
-          text: data.value,
+          text: data.value.replace(this.re,"").replace(this.re2,"").replace(this.re3,"").replace(this.re4,"").replace(this.re5,"").replace(this.re6,""),
         };
       });
     });

@@ -30,8 +30,15 @@ var facebook = require('./../endpoint/facebook');
 var linkedIn = require('./../endpoint/linkedin');
 var fitbit = require('./../endpoint/fitbit');
 var telegram = require('./../endpoint/telegram');
-
+var music = require('./../endpoint/music');
+var news = require('./../endpoint/news');
+var training = require('./../endpoint/training');
+var programmatv = require('./../endpoint/programmatv');
+var removeInterest = require('../endpoint/removeInterest');
+var video = require('./../endpoint/video');
+var recipes = require('./../endpoint/recipes');
 var instagram = require('./../endpoint/instagram');
+
 var endpointAuth = require('./../endpoint/auth');
 var socketLogs = require('./../sockets/logs');
 var socketMobileApp = require('./../sockets/mobileapp');
@@ -91,6 +98,13 @@ var webServiceSetup = function(crowdPulse) {
   app.use(API, fitbit.endpoint());
   app.use(API, instagram.endpoint());
   app.use(AUTH, endpointAuth());
+  app.use(API, music.endpoint());
+  app.use(API, training.endpoint());
+  app.use(API,news.endpoint());
+  app.use(API,programmatv.endpoint());
+  app.use(API,video.endpoint());
+  app.use(API,recipes.endpoint());
+  app.use(API,removeInterest.endpoint());
 
   return crowdPulse;
 };

@@ -10,8 +10,8 @@ var FacebookProfileSchema = require('./../crowd-pulse-data/schema/facebookProfil
 var batch = require('./../lib/batchOperations');
 
 const DB_PROFILES = databaseName.profiles;
-const CLIENT_SECRET = '7ce264e7a782298475830477d9442bc6';
-const CLIENT_ID = '637963103055683';
+const CLIENT_SECRET = 'b322f087f971a153e99db46e082a6db1';
+const CLIENT_ID = '275949373859060';
 
 const FIELDS = ['id', 'email', 'first_name', 'last_name', 'middle_name', 'link', 'name', 'age_range', 'gender',
   'languages', 'quotes'];

@@ -2,5 +2,6 @@
 
 module.exports = {
   profiles: 'profiles',
-  globalData: 'globalData'
+  globalData: 'globalData',
+  musicPreference: 'musicPreference'
 };
